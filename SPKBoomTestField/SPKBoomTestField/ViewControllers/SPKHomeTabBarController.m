@@ -7,7 +7,12 @@
 //
 
 #import "SPKHomeTabBarController.h"
+
 #import "SPKNetworkExampleController.h"
+#import "SPKSecondViewController.h"
+
+
+#import "SPKGGG.h"
 
 @interface SPKHomeTabBarController ()
 
@@ -18,10 +23,10 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        SPKNetworkExampleController *boomTestField_One = [[SPKNetworkExampleController alloc] init];
+        SPKGGG *boomTestField_One = [[SPKGGG alloc] init];
         boomTestField_One.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"1" image:nil tag:0];
         
-        UIViewController *boomTestField_Two = [[UIViewController alloc] init];
+        SPKSecondViewController *boomTestField_Two = [[SPKSecondViewController alloc] init];
         boomTestField_Two.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"2" image:nil tag:0];
         
         UIViewController *boomTestField_Three = [[UIViewController alloc] init];
@@ -40,6 +45,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//
+//    NSLog(@"----- TabBarController -----");
+//    NSLog(@"%@", self.view.safeAreaLayoutGuide);
+//    NSLog(@"%@", NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
 }
 
 @end

@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^HTLSliderControlMoveBlock)(CGFloat moveOffset);
 
-typedef void(^SPKSliderControlMoveBlock)(CGFloat moveOffset);
-
-@interface SPKSliderControl : UIView
+@interface HTLSliderControl : UIView
 
 //default is nil
 @property (nonatomic) UIImage *normalImage;
@@ -19,20 +18,20 @@ typedef void(^SPKSliderControlMoveBlock)(CGFloat moveOffset);
 //default is nill
 @property (nonatomic) UIImage *highlightedImage;
 
-@property (nonatomic, copy) SPKSliderControlMoveBlock moveBlock;
+@property (nonatomic, copy) HTLSliderControlMoveBlock moveBlock;
 
 @end
 
 
 
-typedef NS_ENUM(NSInteger, SPKSlideViewType) {
-    SPKSlideViewTypeSingleControl = 0, //just one SlideControl to use
-    SPKSlideViewTypeTwoControls   = 1  //two controls to use
+typedef NS_ENUM(NSInteger, HTLSlideViewType) {
+    HTLSlideViewTypeSingleControl = 0, //just one SlideControl to use
+    HTLSlideViewTypeTwoControls   = 1  //two controls to use
 };
 
-typedef void(^SPKSlideViewMoveBlock)(CGFloat minValue, CGFloat maxValue);
+typedef void(^HTLSlideViewMoveBlock)(CGFloat minValue, CGFloat maxValue);
 
-@interface SPKSlideView : UIView
+@interface HTLSlideView : UIView
 
 //default is grayColor.
 @property (nonatomic) UIColor *progressNormalColor;
@@ -64,12 +63,12 @@ typedef void(^SPKSlideViewMoveBlock)(CGFloat minValue, CGFloat maxValue);
 //current min max value
 @property (nonatomic, readonly) CGFloat currentMinValue;
 @property (nonatomic, readonly) CGFloat currentMaxValue;
-@property (nonatomic, copy) SPKSlideViewMoveBlock slideMoveBlock;
+@property (nonatomic, copy) HTLSlideViewMoveBlock slideMoveBlock;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
-- (instancetype)initWithFrame:(CGRect)frame type:(SPKSlideViewType)type NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame type:(HTLSlideViewType)type NS_DESIGNATED_INITIALIZER;
 
 @end
 

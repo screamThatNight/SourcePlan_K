@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DD9E2F06981B926339E3AFC /* libPods-SPKBoomTestFieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FF8D8BEDBAAE96A159F4AA /* libPods-SPKBoomTestFieldTests.a */; };
+		757BCDE21D3D82E66CA41EFC /* libPods-SPKBoomTestField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB556B87E4198AD354E0B90 /* libPods-SPKBoomTestField.a */; };
+		7CDECADC3306457E465AB29F /* libPods-SPKBoomTestFieldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA9E0A7D831897D981A3B83 /* libPods-SPKBoomTestFieldUITests.a */; };
+		CE1727271FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1727261FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.m */; };
+		CE22BA5F1FA1CD6D002ED4D2 /* SPKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE22BA5E1FA1CD6D002ED4D2 /* SPKSecondViewController.m */; };
 		CE6FE3501F6BB44B00F5C585 /* DKNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FE34F1F6BB44B00F5C585 /* DKNetworkResponse.m */; };
 		CE6FE35B1F6BBC3E00F5C585 /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FE3521F6BBC3E00F5C585 /* NSData+Encryption.m */; };
 		CE6FE35C1F6BBC3E00F5C585 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FE3541F6BBC3E00F5C585 /* NSObject+JSON.m */; };
@@ -26,13 +31,15 @@
 		CEA2EFB31F6AC59D00D834D3 /* SPKToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2EFB21F6AC59D00D834D3 /* SPKToastView.m */; };
 		CEA2EFB61F6AC79700D834D3 /* UILabel+SPKLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2EFB51F6AC79700D834D3 /* UILabel+SPKLabel.m */; };
 		CEA2EFB91F6ACA2000D834D3 /* NSString+SPKString.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2EFB81F6ACA2000D834D3 /* NSString+SPKString.m */; };
+		CEB173E51FA31B68000F51E8 /* SPKGGG.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB173E41FA31B68000F51E8 /* SPKGGG.m */; };
+		CEC8000B1F977E280061527B /* HOTELSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC800091F977E270061527B /* HOTELSlideView.m */; };
 		CEE663621F6A569800551F01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE663611F6A569800551F01 /* main.m */; };
 		CEE663651F6A569800551F01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE663641F6A569800551F01 /* AppDelegate.m */; };
 		CEE6636D1F6A569800551F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE6636C1F6A569800551F01 /* Assets.xcassets */; };
 		CEE663701F6A569800551F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE6636E1F6A569800551F01 /* LaunchScreen.storyboard */; };
 		CEE6637B1F6A569800551F01 /* SPKBoomTestFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6637A1F6A569800551F01 /* SPKBoomTestFieldTests.m */; };
 		CEE663861F6A569800551F01 /* SPKBoomTestFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE663851F6A569800551F01 /* SPKBoomTestFieldUITests.m */; };
-		CEE9C1C01F6F795D003549F2 /* SPKSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9C1BF1F6F795D003549F2 /* SPKSlideView.m */; };
+		CEE9C1C01F6F795D003549F2 /* HTLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9C1BF1F6F795D003549F2 /* HTLSlideView.m */; };
 		CEF031BC1F6A790B00A30302 /* DKNetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF031B71F6A790B00A30302 /* DKNetworkError.m */; };
 		CEF031BD1F6A790B00A30302 /* DKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF031B91F6A790B00A30302 /* DKNetworkManager.m */; };
 		CEF031BE1F6A790B00A30302 /* NonZeroingURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF031BB1F6A790B00A30302 /* NonZeroingURLCache.m */; };
@@ -65,6 +72,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FB556B87E4198AD354E0B90 /* libPods-SPKBoomTestField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPKBoomTestField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D0AE6DC487C7C1B3A0CEF5 /* Pods-SPKBoomTestFieldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestFieldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestFieldUITests/Pods-SPKBoomTestFieldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		33D878DC813EB88D1C4B8466 /* Pods-SPKBoomTestFieldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestFieldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestFieldUITests/Pods-SPKBoomTestFieldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		533D546420D2BD0D5D65A271 /* Pods-SPKBoomTestField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestField.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestField/Pods-SPKBoomTestField.release.xcconfig"; sourceTree = "<group>"; };
+		55FF8D8BEDBAAE96A159F4AA /* libPods-SPKBoomTestFieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPKBoomTestFieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA9E0A7D831897D981A3B83 /* libPods-SPKBoomTestFieldUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPKBoomTestFieldUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91B1B5C401E4E1DA47BDC578 /* Pods-SPKBoomTestField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestField/Pods-SPKBoomTestField.debug.xcconfig"; sourceTree = "<group>"; };
+		92CEDC813173CA4D11610A8D /* Pods-SPKBoomTestFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestFieldTests/Pods-SPKBoomTestFieldTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE1727251FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SPKBlockSupport.h"; sourceTree = "<group>"; };
+		CE1727261FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SPKBlockSupport.m"; sourceTree = "<group>"; };
+		CE22BA5D1FA1CD6D002ED4D2 /* SPKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPKSecondViewController.h; sourceTree = "<group>"; };
+		CE22BA5E1FA1CD6D002ED4D2 /* SPKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPKSecondViewController.m; sourceTree = "<group>"; };
 		CE6FE34E1F6BB44B00F5C585 /* DKNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNetworkResponse.h; sourceTree = "<group>"; };
 		CE6FE34F1F6BB44B00F5C585 /* DKNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNetworkResponse.m; sourceTree = "<group>"; };
 		CE6FE3511F6BBC3E00F5C585 /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
@@ -103,6 +122,10 @@
 		CEA2EFB51F6AC79700D834D3 /* UILabel+SPKLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SPKLabel.m"; sourceTree = "<group>"; };
 		CEA2EFB71F6ACA2000D834D3 /* NSString+SPKString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SPKString.h"; sourceTree = "<group>"; };
 		CEA2EFB81F6ACA2000D834D3 /* NSString+SPKString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SPKString.m"; sourceTree = "<group>"; };
+		CEB173E31FA31B68000F51E8 /* SPKGGG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPKGGG.h; sourceTree = "<group>"; };
+		CEB173E41FA31B68000F51E8 /* SPKGGG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPKGGG.m; sourceTree = "<group>"; };
+		CEC800091F977E270061527B /* HOTELSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOTELSlideView.m; sourceTree = "<group>"; };
+		CEC8000A1F977E280061527B /* HOTELSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOTELSlideView.h; sourceTree = "<group>"; };
 		CEE6635D1F6A569800551F01 /* SPKBoomTestField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPKBoomTestField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE663611F6A569800551F01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE663631F6A569800551F01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,8 +139,8 @@
 		CEE663811F6A569800551F01 /* SPKBoomTestFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPKBoomTestFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE663851F6A569800551F01 /* SPKBoomTestFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPKBoomTestFieldUITests.m; sourceTree = "<group>"; };
 		CEE663871F6A569800551F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEE9C1BE1F6F795D003549F2 /* SPKSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKSlideView.h; sourceTree = "<group>"; };
-		CEE9C1BF1F6F795D003549F2 /* SPKSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKSlideView.m; sourceTree = "<group>"; };
+		CEE9C1BE1F6F795D003549F2 /* HTLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLSlideView.h; sourceTree = "<group>"; };
+		CEE9C1BF1F6F795D003549F2 /* HTLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLSlideView.m; sourceTree = "<group>"; };
 		CEF031B61F6A790B00A30302 /* DKNetworkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNetworkError.h; sourceTree = "<group>"; };
 		CEF031B71F6A790B00A30302 /* DKNetworkError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNetworkError.m; sourceTree = "<group>"; };
 		CEF031B81F6A790B00A30302 /* DKNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNetworkManager.h; sourceTree = "<group>"; };
@@ -138,6 +161,7 @@
 		CEF031DC1F6A935700A30302 /* SPKNetworkExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKNetworkExampleController.m; sourceTree = "<group>"; };
 		CEF031DE1F6A978E00A30302 /* UIButton+SPKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SPKButton.h"; sourceTree = "<group>"; };
 		CEF031DF1F6A978E00A30302 /* UIButton+SPKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SPKButton.m"; sourceTree = "<group>"; };
+		E5AF80A8D584719FF6C26238 /* Pods-SPKBoomTestFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPKBoomTestFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPKBoomTestFieldTests/Pods-SPKBoomTestFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757BCDE21D3D82E66CA41EFC /* libPods-SPKBoomTestField.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD9E2F06981B926339E3AFC /* libPods-SPKBoomTestFieldTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,12 +185,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDECADC3306457E465AB29F /* libPods-SPKBoomTestFieldUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3540FFA6EAB6664D16D1CCDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FB556B87E4198AD354E0B90 /* libPods-SPKBoomTestField.a */,
+				55FF8D8BEDBAAE96A159F4AA /* libPods-SPKBoomTestFieldTests.a */,
+				6DA9E0A7D831897D981A3B83 /* libPods-SPKBoomTestFieldUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9F95EB1DB1D3EA8FDCCABE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91B1B5C401E4E1DA47BDC578 /* Pods-SPKBoomTestField.debug.xcconfig */,
+				533D546420D2BD0D5D65A271 /* Pods-SPKBoomTestField.release.xcconfig */,
+				E5AF80A8D584719FF6C26238 /* Pods-SPKBoomTestFieldTests.debug.xcconfig */,
+				92CEDC813173CA4D11610A8D /* Pods-SPKBoomTestFieldTests.release.xcconfig */,
+				33D878DC813EB88D1C4B8466 /* Pods-SPKBoomTestFieldUITests.debug.xcconfig */,
+				15D0AE6DC487C7C1B3A0CEF5 /* Pods-SPKBoomTestFieldUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE78BE5B1F6A648B003C848A /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +242,8 @@
 				CEA2EFB51F6AC79700D834D3 /* UILabel+SPKLabel.m */,
 				CEA2EFB71F6ACA2000D834D3 /* NSString+SPKString.h */,
 				CEA2EFB81F6ACA2000D834D3 /* NSString+SPKString.m */,
+				CE1727251FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.h */,
+				CE1727261FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -263,6 +315,8 @@
 				CEE663791F6A569800551F01 /* SPKBoomTestFieldTests */,
 				CEE663841F6A569800551F01 /* SPKBoomTestFieldUITests */,
 				CEE6635E1F6A569800551F01 /* Products */,
+				A9F95EB1DB1D3EA8FDCCABE1 /* Pods */,
+				3540FFA6EAB6664D16D1CCDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,8 +379,8 @@
 		CEE9C1BD1F6F78EC003549F2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				CEE9C1BE1F6F795D003549F2 /* SPKSlideView.h */,
-				CEE9C1BF1F6F795D003549F2 /* SPKSlideView.m */,
+				CEE9C1BE1F6F795D003549F2 /* HTLSlideView.h */,
+				CEE9C1BF1F6F795D003549F2 /* HTLSlideView.m */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -376,8 +430,12 @@
 		CEF031D71F6A92F900A30302 /* one */ = {
 			isa = PBXGroup;
 			children = (
+				CEC8000A1F977E280061527B /* HOTELSlideView.h */,
+				CEC800091F977E270061527B /* HOTELSlideView.m */,
 				CEF031DB1F6A935700A30302 /* SPKNetworkExampleController.h */,
 				CEF031DC1F6A935700A30302 /* SPKNetworkExampleController.m */,
+				CEB173E31FA31B68000F51E8 /* SPKGGG.h */,
+				CEB173E41FA31B68000F51E8 /* SPKGGG.m */,
 			);
 			path = one;
 			sourceTree = "<group>";
@@ -392,16 +450,10 @@
 		CEF031D91F6A92F900A30302 /* two */ = {
 			isa = PBXGroup;
 			children = (
-				CEF031DA1F6A92F900A30302 /* PartOne */,
+				CE22BA5D1FA1CD6D002ED4D2 /* SPKSecondViewController.h */,
+				CE22BA5E1FA1CD6D002ED4D2 /* SPKSecondViewController.m */,
 			);
 			path = two;
-			sourceTree = "<group>";
-		};
-		CEF031DA1F6A92F900A30302 /* PartOne */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PartOne;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,9 +463,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE6638A1F6A569800551F01 /* Build configuration list for PBXNativeTarget "SPKBoomTestField" */;
 			buildPhases = (
+				FDF2B443DFBEFBD540878386 /* [CP] Check Pods Manifest.lock */,
 				CEE663591F6A569800551F01 /* Sources */,
 				CEE6635A1F6A569800551F01 /* Frameworks */,
 				CEE6635B1F6A569800551F01 /* Resources */,
+				FCD28B6DCC0F31F2DC8C077E /* [CP] Embed Pods Frameworks */,
+				2321519427A1648BD925C84C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -428,9 +483,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE6638D1F6A569800551F01 /* Build configuration list for PBXNativeTarget "SPKBoomTestFieldTests" */;
 			buildPhases = (
+				61DAF9DE803D172950F53367 /* [CP] Check Pods Manifest.lock */,
 				CEE663721F6A569800551F01 /* Sources */,
 				CEE663731F6A569800551F01 /* Frameworks */,
 				CEE663741F6A569800551F01 /* Resources */,
+				8C20CB46884BCC0FE8F34C2F /* [CP] Embed Pods Frameworks */,
+				433134A2185A1D9B4ADF6BDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,9 +504,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE663901F6A569800551F01 /* Build configuration list for PBXNativeTarget "SPKBoomTestFieldUITests" */;
 			buildPhases = (
+				DA147711E45FC6EF39CBD97B /* [CP] Check Pods Manifest.lock */,
 				CEE6637D1F6A569800551F01 /* Sources */,
 				CEE6637E1F6A569800551F01 /* Frameworks */,
 				CEE6637F1F6A569800551F01 /* Resources */,
+				36107307A1C3B601B37E345C /* [CP] Embed Pods Frameworks */,
+				B17C4B3DCD2FF00802B3188C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -539,6 +600,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2321519427A1648BD925C84C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestField/Pods-SPKBoomTestField-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36107307A1C3B601B37E345C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestFieldUITests/Pods-SPKBoomTestFieldUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		433134A2185A1D9B4ADF6BDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestFieldTests/Pods-SPKBoomTestFieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DAF9DE803D172950F53367 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SPKBoomTestFieldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C20CB46884BCC0FE8F34C2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestFieldTests/Pods-SPKBoomTestFieldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B17C4B3DCD2FF00802B3188C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestFieldUITests/Pods-SPKBoomTestFieldUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA147711E45FC6EF39CBD97B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SPKBoomTestFieldUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD28B6DCC0F31F2DC8C077E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPKBoomTestField/Pods-SPKBoomTestField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF2B443DFBEFBD540878386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SPKBoomTestField-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEE663591F6A569800551F01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -550,6 +758,8 @@
 				CE6FE35F1F6BBC3E00F5C585 /* UIView+ExclusiveTouchSet.m in Sources */,
 				CE6FE35B1F6BBC3E00F5C585 /* NSData+Encryption.m in Sources */,
 				CEA2EFB01F6AC3D100D834D3 /* UIColor+SPKColor.m in Sources */,
+				CE1727271FBD6F7900E9BA90 /* NSTimer+SPKBlockSupport.m in Sources */,
+				CEB173E51FA31B68000F51E8 /* SPKGGG.m in Sources */,
 				CEE663651F6A569800551F01 /* AppDelegate.m in Sources */,
 				CEA12DAE1F724C31001019F2 /* HOTELPageController.m in Sources */,
 				CE6FE3501F6BB44B00F5C585 /* DKNetworkResponse.m in Sources */,
@@ -563,14 +773,16 @@
 				CEF031C11F6A797D00A30302 /* SPKHomeTabBarController.m in Sources */,
 				CE7241271F72BA7D008311F5 /* HOTELUserBrowseViewController.m in Sources */,
 				CEA2EFB31F6AC59D00D834D3 /* SPKToastView.m in Sources */,
+				CEC8000B1F977E280061527B /* HOTELSlideView.m in Sources */,
 				CE6FE3621F6BD10400F5C585 /* SPKLoadingView.m in Sources */,
 				CEF031BE1F6A790B00A30302 /* NonZeroingURLCache.m in Sources */,
 				CEA2EFAA1F6AAE5D00D834D3 /* UIView+FrameAdjust.m in Sources */,
-				CEE9C1C01F6F795D003549F2 /* SPKSlideView.m in Sources */,
+				CEE9C1C01F6F795D003549F2 /* HTLSlideView.m in Sources */,
 				CEA2EFB61F6AC79700D834D3 /* UILabel+SPKLabel.m in Sources */,
 				CE6FE35E1F6BBC3E00F5C585 /* NSString+Hashing.m in Sources */,
 				CEF031E01F6A978E00A30302 /* UIButton+SPKButton.m in Sources */,
 				CEF031DD1F6A935700A30302 /* SPKNetworkExampleController.m in Sources */,
+				CE22BA5F1FA1CD6D002ED4D2 /* SPKSecondViewController.m in Sources */,
 				CEA12DB41F7258ED001019F2 /* HTLPageChildViewController.m in Sources */,
 				CEA12DB71F7281FC001019F2 /* HOTELTagChoseView.m in Sources */,
 			);
@@ -660,7 +872,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -702,7 +914,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -711,6 +923,7 @@
 		};
 		CEE6638B1F6A569800551F01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B1B5C401E4E1DA47BDC578 /* Pods-SPKBoomTestField.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62D8258J9Q;
@@ -725,6 +938,7 @@
 		};
 		CEE6638C1F6A569800551F01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 533D546420D2BD0D5D65A271 /* Pods-SPKBoomTestField.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62D8258J9Q;
@@ -739,6 +953,7 @@
 		};
 		CEE6638E1F6A569800551F01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5AF80A8D584719FF6C26238 /* Pods-SPKBoomTestFieldTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 62D8258J9Q;
@@ -752,6 +967,7 @@
 		};
 		CEE6638F1F6A569800551F01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92CEDC813173CA4D11610A8D /* Pods-SPKBoomTestFieldTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 62D8258J9Q;
@@ -765,6 +981,7 @@
 		};
 		CEE663911F6A569800551F01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D878DC813EB88D1C4B8466 /* Pods-SPKBoomTestFieldUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 62D8258J9Q;
 				INFOPLIST_FILE = SPKBoomTestFieldUITests/Info.plist;
@@ -777,6 +994,7 @@
 		};
 		CEE663921F6A569800551F01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15D0AE6DC487C7C1B3A0CEF5 /* Pods-SPKBoomTestFieldUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 62D8258J9Q;
 				INFOPLIST_FILE = SPKBoomTestFieldUITests/Info.plist;

@@ -40,6 +40,9 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.scrollView.frame = self.view.bounds;
+    CGSize size = self.scrollView.contentSize;
+    size.height = self.scrollView.height;
+    self.scrollView.contentSize = size;
     [self.scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.size = self.scrollView.size;
     }];
@@ -193,6 +196,9 @@
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.backgroundColor = [UIColor grayColor];
+        
+        //iOS_11新增属性
+        _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     }
     return _scrollView;
 }
