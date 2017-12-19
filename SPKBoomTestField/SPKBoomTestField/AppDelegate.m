@@ -10,11 +10,41 @@
 #import "SPKHomeViewController.h"
 #import "SPKHomeTabBarController.h"
 
+#import "SPKNetworkExampleController.h"
+
+#import "HTLPageChildViewController.h"
+
+#import "SPKGGG.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+//现在这个情况，要从全局看项目了。
+
+//cocoaPod与github的关联？卧槽...
+
+//1 cocoaPod get
+//2 私有仓库化
+
+//项目的持续集成 -> jekins
+//项目的远程仓库 -> github https://github.com/screamThatNight
+//项目的模块化 -> github 私有仓库
+//代码检查 -> OCLint
+
+/*
+ //工程内部 1.代码规范
+ 
+ 路由: -> 处理一切跳转
+ netWorkClient -> 负责请求
+ babel: -> 摆脱model创建
+ 
+ github私有仓库 -> 模块化 组件化
+ 
+ 适用业务的框架
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

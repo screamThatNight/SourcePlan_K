@@ -29,22 +29,50 @@ HOTELPageControllerDelegate
 
 #pragma mark - life cycle
 
++ (void)load {
+    //
+    [super load];
+    
+    NSLog(@"222");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tagChoseView];
-    
+
     self.pageController = [[HOTELPageController alloc] init];
+    self.pageController.view.width = self.view.width;
+    self.pageController.view.left = 0;
     self.pageController.dataSource = self;
     self.pageController.delegate = self;
-    self.pageController.view.size = CGSizeMake(self.view.width, self.view.height - self.tagChoseView.height);
-    self.pageController.view.top = self.tagChoseView.bottom;
-    self.pageController.view.left = 0;
     [self addChildViewController:self.pageController];
     [self.pageController didMoveToParentViewController:self];
     [self.view addSubview:self.pageController.view];
-    
+
     [self.tagChoseView reload];
     [self.pageController reload];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:scrollView];
+}
+
+//iOS11上的方法
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    
+    //如果navigationBar与tabBar隐藏掉了，view的safeAreaInset还会考虑到这两个视图的偏移吗？
+    //经过试验，当隐藏掉自己的navigationBar后，safeAreaInset不会包含navigationBar的高度。
+    NSLog(@"%@", self.view.safeAreaLayoutGuide);
+    NSLog(@"%@", NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    // 适用于所有版本的适配方法
+    self.tagChoseView.top = self.view.spk_safeAreaInsets.top;
+    self.pageController.view.top = self.tagChoseView.bottom;
+    self.pageController.view.height = self.view.height - self.tagChoseView.height - self.view.spk_safeAreaInsets.top - self.view.spk_safeAreaInsets.bottom;
 }
 
 - (void)dealloc {
@@ -114,7 +142,6 @@ HOTELPageControllerDelegate
     if (!_tagChoseView) {
         _tagChoseView = [[HOTELTagChoseView alloc] init];
         _tagChoseView.size = CGSizeMake(self.view.size.width, 50);
-        _tagChoseView.top = 64;
         _tagChoseView.left = 0;
         _tagChoseView.dataSource = self;
         _tagChoseView.delegate = self;

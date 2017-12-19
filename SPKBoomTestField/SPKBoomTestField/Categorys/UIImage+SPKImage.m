@@ -21,4 +21,32 @@
     return image;
 }
 
++ (UIImage *)imageWithSize:(CGSize)size
+                 lineWidth:(CGFloat)lineWidth
+               borderColor:(UIColor *)borderColor
+              cornerRadius:(CGFloat)radius
+           backgroundColor:(UIColor *)color {
+    if (!size.height || !size.width) {return nil;}
+    if (radius > size.height/2) {radius = size.height/2;}
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) cornerRadius:radius];
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 1.f);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+
+    CGContextAddPath(ctx, path.CGPath);
+    CGContextSetFillColorWithColor(ctx, color.CGColor);
+    CGContextFillPath(ctx);
+    
+    CGContextAddPath(ctx, path.CGPath);
+    CGContextSetLineWidth(ctx, lineWidth);
+    CGContextSetStrokeColorWithColor(ctx, borderColor.CGColor);
+    CGContextStrokePath(ctx);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 @end

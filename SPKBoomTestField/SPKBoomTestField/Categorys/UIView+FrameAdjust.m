@@ -102,4 +102,11 @@
     return self.top + self.height/2;
 }
 
+- (UIEdgeInsets)spk_safeAreaInsets {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0
+    return self.safeAreaInsets;
+#endif
+    return UIEdgeInsetsZero;
+}
+
 @end

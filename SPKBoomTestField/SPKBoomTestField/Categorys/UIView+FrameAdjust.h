@@ -26,4 +26,6 @@
 @property (nonatomic) CGFloat centerX;
 @property (nonatomic) CGFloat centerY;
 
+- (UIEdgeInsets)spk_safeAreaInsets;
+
 @end

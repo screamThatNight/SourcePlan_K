@@ -6,12 +6,12 @@
 //  Copyright © 2017年 liukang09. All rights reserved.
 //
 
-#import "SPKSlideView.h"
+#import "HTLSlideView.h"
 #import "UIColor+SPKColor.h"
 
-#pragma mark - SPKSliderControl
+#pragma mark - HTLSliderControl
 
-@implementation SPKSliderControl
+@implementation HTLSliderControl
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -39,9 +39,9 @@
 
 
 
-#pragma mark - SPKSlidePriceView
+#pragma mark - HTLSlidePriceView
 
-@interface SPKSlideView ()
+@interface HTLSlideView ()
 
 @property (nonatomic) CAShapeLayer *sliderProgressLayer; // display in back
 @property (nonatomic) CAShapeLayer *tintLayer;
@@ -52,9 +52,9 @@
 
 @end
 
-@implementation SPKSlideView
+@implementation HTLSlideView
 
-- (instancetype)initWithFrame:(CGRect)frame type:(SPKSlideViewType)type {
+- (instancetype)initWithFrame:(CGRect)frame type:(HTLSlideViewType)type {
     self = [super initWithFrame:frame];
     if (self) {
         self.clipsToBounds = NO;
@@ -81,7 +81,7 @@
         _tintLayer.backgroundColor = [UIColor redColor].CGColor;
         [_sliderProgressLayer addSublayer:_tintLayer];
         
-        SPKSliderControl *firstControl = [self p_createControl];
+        HTLSliderControl *firstControl = [self p_createControl];
         [self addSubview:firstControl];
         [_controlsArray addObject:firstControl];
         
@@ -90,8 +90,8 @@
         firstTipLabel.text = [NSString stringWithFormat:@"%.f", _currentMaxValue];
         [_tipsArray addObject:firstTipLabel];
         
-        if (type == SPKSlideViewTypeTwoControls) {
-            SPKSliderControl *secondControl = [self p_createControl];
+        if (type == HTLSlideViewTypeTwoControls) {
+            HTLSliderControl *secondControl = [self p_createControl];
             [self addSubview:secondControl];
             [_controlsArray addObject:secondControl];
             
@@ -119,16 +119,16 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    for (SPKSliderControl *control in self.controlsArray) {
+    for (HTLSliderControl *control in self.controlsArray) {
         control.size = self.controlSize;
         control.top = (self.height - self.controlSize.height)/2;
     }
     CGFloat pointScale = (CGFloat)(self.width - self.controlSize.width)/(CGFloat)self.displayedMaxValue;
     //reset controls frame
-    SPKSliderControl *firstControl = [self.controlsArray firstObject];
+    HTLSliderControl *firstControl = [self.controlsArray firstObject];
     firstControl.left = self.currentMaxValue * pointScale;
     if (self.controlsArray.count == 2) {
-        SPKSliderControl *secondeControl = self.controlsArray[1];
+        HTLSliderControl *secondeControl = self.controlsArray[1];
         firstControl.left = self.currentMinValue * pointScale;
         secondeControl.left = self.currentMaxValue * pointScale;
     }
@@ -138,9 +138,9 @@
 
 #pragma mark - private
 
-- (SPKSliderControl *)p_createControl {
+- (HTLSliderControl *)p_createControl {
     __weak typeof(self)ws = self;
-    SPKSliderControl *sliderControl = [[SPKSliderControl alloc] init];
+    HTLSliderControl *sliderControl = [[HTLSliderControl alloc] init];
     sliderControl.backgroundColor = [UIColor randomColor];
     sliderControl.layer.cornerRadius = self.controlSize.height/2;
     sliderControl.layer.masksToBounds = YES;
@@ -184,12 +184,12 @@
         return;
     }
     
-    SPKSliderControl *control = [self.controlsArray firstObject];
+    HTLSliderControl *control = [self.controlsArray firstObject];
     CGFloat startX = 0;
     CGFloat endX = control.centerX - self.controlSize.width/2;
     
     if (self.controlsArray.count == 2) {
-        SPKSliderControl *seconde = self.controlsArray[1];
+        HTLSliderControl *seconde = self.controlsArray[1];
         startX = MIN(control.centerX - self.controlSize.width/2, seconde.centerX - self.controlSize.width/2);
         endX = MAX(control.centerX - self.controlSize.width/2, seconde.centerX - self.controlSize.width/2);
     }
@@ -211,8 +211,8 @@
 }
 
 - (void)p_updateTipsLayout {
-    SPKSliderControl *firstControl = [self.controlsArray firstObject];
-    SPKSliderControl *secondeControl = self.controlsArray.count > 1 ? self.controlsArray[1] : nil;
+    HTLSliderControl *firstControl = [self.controlsArray firstObject];
+    HTLSliderControl *secondeControl = self.controlsArray.count > 1 ? self.controlsArray[1] : nil;
     UILabel *firstTipLabel = [self.tipsArray firstObject];
     UILabel *secondTipLabel = self.tipsArray.count > 1 ? self.tipsArray[1] : nil;
     
@@ -283,13 +283,13 @@
 }
 
 - (void)setControlNormalImage:(UIImage *)controlNormalImage {
-    for (SPKSliderControl *control in self.controlsArray) {
+    for (HTLSliderControl *control in self.controlsArray) {
         control.normalImage = controlNormalImage;
     }
 }
 
 - (void)setControlHighlightedImage:(UIImage *)controlHighlightedImage {
-    for (SPKSliderControl *control in self.controlsArray) {
+    for (HTLSliderControl *control in self.controlsArray) {
         control.highlightedImage = controlHighlightedImage;
     }
 }

@@ -8,7 +8,9 @@
 
 #import "HTLPageChildViewController.h"
 
-@interface HTLPageChildViewController ()
+@interface HTLPageChildViewController () <UITableViewDelegate, UITableViewDataSource, UITableViewDragDelegate, UITableViewDropDelegate>
+
+@property (nonatomic) UITableView *tableView;
 
 @end
 
@@ -17,65 +19,76 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"child - viewDidLoad");
+    [self.view addSubview:self.tableView];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"child - viewWillAppear");
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.tableView.top = self.view.spk_safeAreaInsets.top;
+    self.tableView.height = self.view.height - self.view.spk_safeAreaInsets.top - self.view.spk_safeAreaInsets.bottom;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"child - viewDidAppear");
+- (void)dealloc {
+    NSLog(@"childViewcontroller - dealloc");
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    NSLog(@"child - viewWillDisappear");
+#pragma mark - UITableViewDelegate && UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    NSLog(@"child - viewDidDisappear");
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
 }
 
-- (void)willMoveToParentViewController:(UIViewController *)parent {
-    [super willMoveToParentViewController:parent];
-    NSLog(@"child - willMoveToParentViewController parent : %@", parent);
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.f;
 }
 
-- (void)didMoveToParentViewController:(UIViewController *)parent {
-    [super didMoveToParentViewController:parent];
-    NSLog(@"child - didMoveToParentViewController parent : %@", parent);
-}
-
-- (void)removeFromParentViewController {
-    [super removeFromParentViewController];
-    NSLog(@"child - removeFromParentViewController parent");
-}
-
-#pragma mark - key
-
-- (void)beginAppearanceTransition:(BOOL)isAppearing animated:(BOOL)animated {
-    [super beginAppearanceTransition:isAppearing animated:animated];
-    if (animated) {
-        //说明在动画过程中，不需要做处理
-        return;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"123"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"123"];
     }
-    if (isAppearing) {
-        //做出现预备工作 -> willAppear
-        NSLog(@"%@ 即将出现", self);
-    }
-    else {
-        //做消失预备工作 -> willDissAppear
-        NSLog(@"%@ 即将消失", self);
-    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", @(indexPath.row)];
+    return cell;
 }
 
-- (void)endAppearanceTransition {
-    [super endAppearanceTransition];
-    //做真正的操作 这里过渡结束 要么是彻底出现 要么是彻底消失
-    NSLog(@"%@ 结束过渡", self);
+#pragma mark - aaa
+//能否编辑
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//    //iOS11上 长拉删除
+//    //之前 要点击
+//}
+
+//编辑
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"1");
+}
+
+#pragma mark - getter or setter
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.left = 0;
+        _tableView.width = self.view.width;
+        _tableView.backgroundColor = [UIColor grayColor];
+        
+        _tableView.separatorInsetReference = UITableViewSeparatorInsetFromAutomaticInsets;
+        _tableView.insetsContentViewsToSafeArea = YES;
+        
+        //iOS11决定tableView的内容与边缘距离的是 adjustedContentInset属性，而不是contetnInset？？？？？
+        
+//        //adjustedContentInset是只读属性，其依赖于contentInsetAdjustmentBehavior来决定其行为。
+//        _tableView.contentInsetAdjustmentBehavior =
+//        _tableView.adjustedContentInset =
+    }
+    return _tableView;
 }
 
 @end
