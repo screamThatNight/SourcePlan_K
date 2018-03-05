@@ -19,7 +19,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"child - viewDidLoad");
-    [self.view addSubview:self.tableView];
+//    [self.view addSubview:self.tableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%@", self);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%@", self);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"%@", self);
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"%@", self);
 }
 
 - (void)viewDidLayoutSubviews {
@@ -30,6 +50,11 @@
 
 - (void)dealloc {
     NSLog(@"childViewcontroller - dealloc");
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UIViewController *vc = [UIViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource

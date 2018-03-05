@@ -10,7 +10,7 @@
 
 #import "SPKNetworkExampleController.h"
 #import "SPKSecondViewController.h"
-
+#import "HOTELUserBrowseViewController.h"
 
 #import "SPKGGG.h"
 
@@ -23,7 +23,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        SPKGGG *boomTestField_One = [[SPKGGG alloc] init];
+        HOTELUserBrowseViewController *boomTestField_One = [[HOTELUserBrowseViewController alloc] init];
         boomTestField_One.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"1" image:nil tag:0];
         
         SPKSecondViewController *boomTestField_Two = [[SPKSecondViewController alloc] init];

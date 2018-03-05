@@ -22,6 +22,9 @@
 
 @implementation AppDelegate
 
+//版本控制 选择git https://git-scm.com/book/zh/v2
+//仓库管理 github gitlab ->点评跟知乎使用的是gitLab
+
 //现在这个情况，要从全局看项目了。
 
 //cocoaPod与github的关联？卧槽...
@@ -32,7 +35,7 @@
 //项目的持续集成 -> jekins
 //项目的远程仓库 -> github https://github.com/screamThatNight
 //项目的模块化 -> github 私有仓库
-//代码检查 -> OCLint
+//代码检查 -> OCLint ->
 
 /*
  //工程内部 1.代码规范
@@ -43,7 +46,14 @@
  
  github私有仓库 -> 模块化 组件化
  
+ 图片加载速度与图片大小优化 -> webP格式
+ 
  适用业务的框架
+ 
+ //节省人力方面
+ 1.自动化打包 -> Jekkins
+ 2.自动化测试 -> 安卓支持较好的 appium+python iOS由于appium支持较差，最好使用原生方案。
+ 3
  */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

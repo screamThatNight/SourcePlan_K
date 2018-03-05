@@ -133,7 +133,7 @@ HOTELPageControllerDelegate
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [NSMutableArray arrayWithArray:@[@"上海", @"南通", @"南京", @"呼和浩特", @"普罗米修斯", @"罗", @"天堂与地狱", @"以撒的结合"]];
+        _titleArray = [NSMutableArray arrayWithArray:@[@"上海", @"南通", @"南京"]];
     }
     return _titleArray;
 }

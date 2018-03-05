@@ -122,6 +122,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    //
     NSLog(@"Father - viewWillAppear");
 }
 

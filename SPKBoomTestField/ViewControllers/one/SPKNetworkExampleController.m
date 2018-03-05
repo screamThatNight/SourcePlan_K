@@ -47,7 +47,8 @@
     //是运行期间设置额外的contentInset， 也就是调用setAdditionalSafeAreaInsets 会在某一时刻更新safeAreaInsets，也就是调用更新方法。
 //    [self setAdditionalSafeAreaInsets:UIEdgeInsetsMake(30, 10, 10, 10)];
     
-    //在iOS11，设置为YES，当滚动视图为最上层视图时，可以确保滚动视图不会被系统视图遮住 但是是在iOS11之后，这个属性被废弃，并且被期望使用滚动视图的新属性contentInsetAdjustmentBehavior
+    //在iOS11，设置为YES，当滚动视图为最上层视图时，可以确保滚动视图不会被系统视图遮住 但是是在iOS11之后，这个属性被废弃，并且被期望使用滚
+//    动视图的新属性contentInsetAdjustmentBehavior
 //    self.automaticallyAdjustsScrollViewInsets = YES;
     
     //隐藏掉navigationBar跟tabBar呢 为什么在首屏 没办法隐藏navigationBar?

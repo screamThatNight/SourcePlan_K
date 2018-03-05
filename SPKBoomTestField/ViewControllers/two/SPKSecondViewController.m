@@ -20,16 +20,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.scrollView];
+//    [self.view addSubview:self.scrollView];
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:btn];
+    
+    btn.size = CGSizeMake(44, 100);
+    btn.left = (SCREEN_WIDTH - 44)/2;
+    btn.top = (SCREEN_HEIGHT - 100)/2;
+}
+
+- (void)btnClick:(id)sender {
+    /*
+     Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Application tried to present UIModalTransitionStylePartialCurl to or from non-fullscreen view controller <SPKSecondViewController: 0x7f8920101e30>.'
+     */
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor clearColor];
     UIView *testView = [[UIView alloc] init];
     testView.size = CGSizeMake(100, 100);
-    testView.top = 0;
-    testView.left = 0;
-    testView.backgroundColor = [UIColor blackColor];
-    [self.scrollView addSubview:testView];
+    testView.left = 100;
+    testView.top = 100;
+    testView.backgroundColor = [UIColor redColor];
+    [vc.view addSubview:testView];
     
-    self.scrollView.contentInset = UIEdgeInsetsMake(20, 10, 0, 0);
+//    vc.modalTransitionStyle = UIModalTransitionStylePartialCurl; //负责modal动画 无关大雅
+    
+//    vc.modalPresentationStyle = UIModalPresentationFullScreen; //全屏
+//    vc.modalPresentationStyle = UIModalPresentationPageSheet; //全屏？
+    vc.modalPresentationStyle = UIModalPresentationOverFullScreen; //如果视图没有被填满 底层视图可以透过
+//    vc.modalPresentationStyle = UIModalPresentationCustom; //跟上面的原因一样 emm
+
+//    vc.modalPresentationStyle = UIModalPresentationCustom; //自定制应该需要额外属性
+    [self presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
 }
 
 //scrollView的方法 同样可以在代理中看到
